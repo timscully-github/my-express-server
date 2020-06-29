@@ -17,10 +17,6 @@ app.get("/contact", function(req, res) {
   res.send("<h3>Email me at: hello@timscully.co.uk</h3>");
 });
 
-app.get("/about", function(req, res) {
-  res.send("Hi I'm Tim, i just moved in, I like cooking, gaming and staying in");
-});
-
 // telling express to start a server (localhost:3000)
 // (use nodemon to update server without re-started)
 app.listen(3000, function() {

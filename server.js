@@ -7,9 +7,14 @@ const express = require("express");
 const app = express();
 
 // express method to tell server what to do when it makes a get request (console log request to see info associated with request)
-app.get("/", function(request, response) {
+app.get("/", function(req, res) {
   // send a response back for the get request to the browser
-  response.send("Hello");
+  res.send("<h1>Hello world!</h1>");
+});
+
+// create additional pages
+app.get("/contact", function(req, res) {
+  res.send("<h3>Email me at: hello@timscully.co.uk</h3>");
 });
 
 // telling express to start a server (localhost:3000)
